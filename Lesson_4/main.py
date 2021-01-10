@@ -51,6 +51,7 @@ def Task_5(M_x, D_x, val):
     print('Задача 5')
     print('δ = {0}'.format((val - M_x)/(D_x**(1/2))))
 
+
 if __name__ == '__main__':
     Task_1(200, 800)
     Task_2(0.5, 0.2)
