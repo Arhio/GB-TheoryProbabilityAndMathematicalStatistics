@@ -34,6 +34,7 @@ class Lesson_5:
         T_pos = round(X_hat + t_a_2 * (sigma/(len(exp)**(1/2))), 3)
 
         print('[{0},{1}]'.format(T_pos, T_neg))
+        print('Выборка не репрезентативна в силу малого объема выборки')
 
 
     def Task_3(self, diam:float, mean_diam:float, Disp:float, a:float, n:int):
@@ -86,6 +87,7 @@ class Lesson_5:
             print('Альтернативная гипотиза принимается, а основная отвергается')
         else:
             print('Принимается основная в силу невозможности ее отвергуть')
+        print('Выборка не репрезентативна в силу малого объема выборки')
 
 
 if __name__ == '__main__':
