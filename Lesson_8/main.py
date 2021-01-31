@@ -13,11 +13,11 @@ class Lesson_8:
 
         Y_hat = sum([sum(e) for e in y]) / sum(n)
         S_2 = sum([sum([(f - Y_hat)**2 for f in e]) for e in y])
-        Sf_2 = sum([n[pos]*(e - Y_hat)**2 for pos, e in enumerate(y_hat)])
+        Sf_2 = sum([n[pos] * (e - Y_hat)**2 for pos, e in enumerate(y_hat)])
         S_oct_2 = sum([sum([(f - y_hat[pos])**2 for f in e]) for pos, e in enumerate(y)])
         isS_2valid = (Sf_2 + S_oct_2) == S_2
-        sigma_F_2 = Sf_2 /(k - 1)
-        sigma_ost_2 = S_oct_2/ (sum(n) - k)
+        sigma_F_2 = Sf_2 / (k - 1)
+        sigma_ost_2 = S_oct_2 / (sum(n) - k)
         F_H = sigma_F_2 / sigma_ost_2
 
         df_merge = round(k - 1)
@@ -37,8 +37,8 @@ class Lesson_8:
 if __name__ == '__main__':
     lesson = Lesson_8()
     #lesson.Task_1([[70, 50, 65, 60, 75], [80, 75, 90, 70, 75, 65, 85, 100], [130, 100, 140, 150, 160, 170, 200]])
-    lesson.Task_1([[173, 175, 180, 178, 185, 182, 183],
-                   [177, 1679, 180, 188, 177, 172, 171, 184, 180],
-                   [172, 173, 169, 177, 166, 180, 178, 177, 172, 166, 178]])
+    lesson.Task_1([[173, 175, 180, 178, 177, 185, 183, 182],
+                   [177, 179, 180, 188, 177, 172, 171, 184, 180],
+                   [172, 173, 169, 177, 166, 180, 178, 177, 172, 166, 170]])
 
 
